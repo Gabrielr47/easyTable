@@ -8,13 +8,6 @@
 * Select using Shift Arrow Up or Arrow Down
 * Select using Crtl + Click
 
-
-<p>Include script <em>after</em> the jQuery library:</p>
-
-<pre><code>&lt;script src="easyTable.js"&gt;&lt;/script&gt;
-</code></pre>
-
-
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="mini-icon mini-icon-link"></span></a>Installation</h2>
 
