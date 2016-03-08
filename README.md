@@ -24,9 +24,8 @@ $(document).ready(function () {
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
 <p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Demo</a></strong> </p>
 <h2>
-<h2>
 <a name="authors" class="anchor" href="#authors"><span class="mini-icon mini-icon-link"></span></a>Authors</h2>
 
 <p><a href="http://pt.stackoverflow.com/users/17658/gabriel-rodrigues" target="_blank">Gabriel Rodrigues</a></p>
 <p><a href="http://pt.stackoverflow.com/users/41757/gabriel-leite" target="_blank">Gabriel Leite</a></p></article>
-<h2>
+
