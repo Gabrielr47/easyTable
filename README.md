@@ -24,5 +24,5 @@ $(document).ready(function () {
 ```
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
-<p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Demo/</a></strong> </p>
+<p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Demo</a></strong> </p>
 <h2>
