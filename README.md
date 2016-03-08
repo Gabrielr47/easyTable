@@ -1,8 +1,6 @@
 # easyTable
 easyTable is a simple plugin for jQuery.
 
-**Demo:** [easyTable Demo]().
-
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="mini-icon mini-icon-link"></span></a>Installation</h2>
 
