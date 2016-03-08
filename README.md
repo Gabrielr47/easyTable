@@ -26,7 +26,7 @@
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="mini-icon mini-icon-link"></span></a>Usage</h2>
 
-<p>Create a table with fixed header in the top browser:</p>
+<p>After fill the table with data:</p>
 
 ```javascript
 $(document).ready(function () {
