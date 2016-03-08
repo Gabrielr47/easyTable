@@ -30,7 +30,7 @@ $(document).ready(function () {
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
 <p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Site</a></strong> </p>
-<p><strong><a href="https://jsfiddle.net/filadown/cbsh4wf6/26/">easyTable Jsfiddle</a></strong> </p>
+<p><strong><a href="https://jsfiddle.net/filadown/cbsh4wf6/27/">easyTable Jsfiddle</a></strong> </p>
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="mini-icon mini-icon-link"></span></a>Authors</h2>
 
