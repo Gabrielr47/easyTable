@@ -2,13 +2,17 @@
 
 <h2>
 <a name="Features" class="anchor" href="#features"><span class="mini-icon mini-icon-link"></span></a>Features</h2>
-* Sort Asc - Desc
+* Sort asc - desc
 * Filter By Numbers and Text
 * Select All/Clear
 * Select using Shift Arrow Up or Arrow Down
 * Select using Crtl + Click
 * Fixed Header with Scroll
 * Mobile First
+* Cross-browser: IE 8.0+, FF 3+, Safari 2.0+, Opera 9.0+, Chrome 5.0+.
+* Supports Bootstrap v2 and 3.
+* Supports Font Awesome.
+* Small code size, just 4KB minified.
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="mini-icon mini-icon-link"></span></a>Installation</h2>
