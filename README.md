@@ -1,5 +1,4 @@
-# easyTable
-easyTable is a simple plugin for jQuery.
+![easyTable is a simple plugin for jQuery.](http://s14.postimg.org/qg7kzmdsx/easy_Table.png)
 
 <h2>
 <a name="Features" class="anchor" href="#features"><span class="mini-icon mini-icon-link"></span></a>Features</h2>
