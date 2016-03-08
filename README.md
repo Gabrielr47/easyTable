@@ -1,7 +1,7 @@
 # easyTable
 easyTable is a simple plugin for jQuery.
 
-**Demo:** [easyTable Demo](http://gabrielr47.github.io/plugin/).
+**Demo:** [easyTable Demo]().
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="mini-icon mini-icon-link"></span></a>Installation</h2>
@@ -22,3 +22,7 @@ $(document).ready(function () {
     $("#tableid").easyTable();
 })
 ```
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
+<p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Demo/</a></strong> </p>
+<h2>
