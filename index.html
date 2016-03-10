@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>EasyTable for jQuery</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"  rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link href="easyTable.css"  rel="stylesheet">
-</head>
-<body>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EasyTable for jQuery</title>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"  rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="easyTable.css"  rel="stylesheet">
+   </head>
+   <body>
 
-	<br>
-	<div class="container">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">easyTable Demo</h3>
-			</div>
-			<div class="panel-body">
-				<table id="table">
-					<thead>
-						<th>Id</th>
-						<th>Nome</th>
-						<th>Valor</th>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-			</div>
-		</div>
+      <br>
+      <div class="container">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h3 class="panel-title">easyTable Demo</h3>
+            </div>
+            <div class="panel-body">
+               <table id="table">
+                  <thead>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>Valor</th>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="easyTable.js"></script>
+      <script>
+         var foo = '';
+         var people = ["Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valentina", "Giovanna", "Maria Eduarda", "Helena", "Beatriz", "Maria Luiza", "Lara"];
+         for (var i = 0; i < people.length; i++) {
+            foo += '<tr><td>' + i + '</td><td>' + people[i] + '</td><td>' + (i + 66.6) + '</td></tr>';
+         }
+         $("#table").find('tbody').append(foo);
+         $("#table").easyTable();
 
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="easyTable.js"></script>
-	<script>
-		var foo = '';
-		var people = ["Sophia","Alice","Julia","Isabella","Manuela","Laura","Luiza","Valentina","Giovanna","Maria Eduarda","Helena","Beatriz","Maria Luiza","Lara"];
-		for (var i = 0; i < people.length; i++) {
-			foo += '<tr><td>' + i + '</td><td>'+people[i]+'</td><td>' + (i + 66.6) + '</td></tr>';
-		}
-
-		$("#table").find('tbody').append(foo);
-		$("#table").easyTable();
-	</script>
-</body>
+      </script>
+   </body>
 </html>
