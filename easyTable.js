@@ -2,7 +2,7 @@
  Table plugin for jQuery
  Copyright (c) 2016 Gabriel Rodrigues e Gabriel Leite (http://gabrielr47.github.io/)
  Licensed under the MIT license
- Version: 0.1
+ Version: 0.2
  */
 
 $.fn.easyTable = function (options) {
@@ -236,6 +236,13 @@ $.fn.easyTable = function (options) {
    this.scroll = function () {
       this.find('tbody').css('height', this.options.scroll.height);
    };
+   this.getSelected = function (col) {
+      var selected = [];
+      this.find('tbody .' + this.options.hover).each(function (key, val) {
+         selected.push($(val).find('td').eq(col).text());
+      });
+      return selected;
+   };
    this.create = function () {
       $("#easyMenuTable").remove();
       this.options = $.extend({}, this.options, options);
@@ -255,8 +262,8 @@ $.fn.easyTable = function (options) {
       if (this.options.scroll.active) {
          this.scroll();
       }
-
    };
    this.create();
+   return this;
 };
 
