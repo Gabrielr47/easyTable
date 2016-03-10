@@ -29,9 +29,17 @@
 <p>After fill the table with data:</p>
 
 ```javascript
-$(document).ready(function () {
-    $("#tableid").easyTable();
-})
+$("#table").easyTable();
+```
+<p>To disable some configuration or customize you can set the params like this:</p>
+```javascript
+$("#table").easyTable({
+    hover:'btn-primary',
+    buttons:false,
+    select:false,
+    sortable:true,
+    scroll: {active: true, height: '400px'}
+});
 ```
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
