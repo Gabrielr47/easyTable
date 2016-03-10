@@ -28,6 +28,9 @@
                   <tbody>
                   </tbody>
                </table>
+
+               <br><br>
+               <button class="btn btn-primary" id="getSelected">Get Selected</button>
             </div>
          </div>
       </div>
@@ -42,7 +45,10 @@
             foo += '<tr><td>' + i + '</td><td>' + people[i] + '</td><td>' + (i + 66.6) + '</td></tr>';
          }
          $("#table").find('tbody').append(foo);
-         $("#table").easyTable();
+         var table = $("#table").easyTable();
+         $("#getSelected").click(function () {
+            console.log(table.getSelected(0));
+         });
 
       </script>
    </body>
