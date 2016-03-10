@@ -3,11 +3,13 @@
 <h2>
 <a name="Features" class="anchor" href="#features"><span class="mini-icon mini-icon-link"></span></a>Features</h2>
 * Sort asc - desc
-* Filter By Numbers and Text
-* Select All/Clear
-* Select using Shift Arrow Up or Arrow Down
-* Select using Crtl + Click
-* Fixed Header with Scroll
+* Filter by Numbers and Text
+* Select all/clear
+* Select using shift arrow up or arrow down
+* Select using crtl + click
+* Fixed header with scroll
+* Easy disable and customize methods
+* Get the values of selected columns
 * Mobile First
 * Cross-browser: IE 8.0+, FF 3+, Safari 2.0+, Opera 9.0+, Chrome 5.0+.
 * Supports Bootstrap v2 and 3.
@@ -41,10 +43,17 @@ $("#table").easyTable({
     scroll: {active: true, height: '400px'}
 });
 ```
+<p> To get the values of columns selected just call the method getSelected() like this:</p>
+```javascript
+var table = $("#table").easyTable();
+$("#getSelected").click(function() {
+  table.getSelected(0); // Where the 0 is the index of column, in this example the id column.
+});
+```
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
 <p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Site</a></strong> </p>
-<p><strong><a href="https://jsfiddle.net/filadown/cbsh4wf6/31/">easyTable Jsfiddle</a></strong> </p>
+<p><strong><a href="https://jsfiddle.net/filadown/cbsh4wf6/34/">easyTable Jsfiddle</a></strong> </p>
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="mini-icon mini-icon-link"></span></a>Authors</h2>
 
