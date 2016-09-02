@@ -2,14 +2,14 @@
  Table plugin for jQuery
  Copyright (c) 2016 Gabriel Rodrigues e Gabriel Leite (http://gabrielr47.github.io/)
  Licensed under the MIT license
- Version: 0.1
+ Version: 0.2
 */
 
 .easyTable {
    outline: none;
 }
 
-.easyTable tbody tr {
+.easyTableSelect tbody tr {
    -webkit-user-select: none;
    -khtml-user-select: none;
    -moz-user-select: none;
@@ -17,7 +17,7 @@
    user-select: none;
 }
 
-#easyMenuTable button {
+.easyTable .row button {
    margin: 5px;
    border-radius: 25px;
    outline: none;
