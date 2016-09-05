@@ -17,7 +17,7 @@
 	custom icon since anyone use this plugin might not use Awesome Font, Title Placement & check if Tooltip function si loaded or not
 	
 	$('#table1').easyTable({
-		button_desc:{
+		buttonDesc:{
 			icon:{check:'fa fa-check',uncheck:'fa fa-close'}
 			,placement:'right'
 		}
@@ -34,7 +34,7 @@
 			select: true,
 			sortable: true,
 			scroll: {active: false, height: '400px'}
-			,button_desc:{
+			,buttonDesc:{
 				icon:{check:'fa fa-check',uncheck:'fa fa-close'}
 				,placement:'right'
 			}
@@ -42,7 +42,8 @@
 		this.message = {
 			all: 'Marcar todos registros.',
 			clear: 'Desmarcar todos registos.',
-			search: 'Pesquisar em'
+			search: 'Pesquisar em',
+			searchText:'Search'
 		};
 		this.select = function () {
 			var table = this;
@@ -205,7 +206,7 @@
 		  this.makeAllSortable(this);
 
 	   };
-	   this.make_menu =function(){
+	   this.makeMenu =function(){
 			var menu = this.find('div.row');
 			if(menu.length > 0){}else{
 				this.prepend('<div class="row" style="margin:9px; "></div>');
@@ -215,11 +216,11 @@
 	   };
 	   this.buttons = function () {
 		  var table = this;
-		  var menu = this.make_menu();
+		  var menu = this.makeMenu();
 		  var all = '<button id=\'all\' class=\'btn ' + this.options.hover + ' btn-sm\' ' +
-				  'data-toggle=\'tooltip\' data-placement="'+this.options.button_desc.placement+'" title=\'' + this.message.all + '\'><i class="'+this.options.button_desc.icon.check+'"></i></button>';
+				  'data-toggle=\'tooltip\' data-placement="'+this.options.buttonDesc.placement+'" title=\'' + this.message.all + '\'><i class="'+this.options.buttonDesc.icon.check+'"></i></button>';
 		  var clear = '<button  id=\'clear\' class=\'btn btn-danger btn-sm\'  ' +
-				  'data-toggle=\'tooltip\' data-placement="'+this.options.button_desc.placement+'" title=\'' + this.message.clear + '\'><i class="'+this.options.button_desc.icon.uncheck+'"></i></button>';
+				  'data-toggle=\'tooltip\' data-placement="'+this.options.buttonDesc.placement+'" title=\'' + this.message.clear + '\'><i class="'+this.options.buttonDesc.icon.uncheck+'"></i></button>';
 		  
 		  menu.prepend('<div class="col-md-6">'+ all + clear +'</div>');
 		  if (typeof $.fn.tooltip === "function") { 
@@ -241,8 +242,8 @@
 	   };
 	   this.filter = function () {
 		  var table = this;
-		  var search = '<div class="col-md-6 pull-right"><div class="input-group"> <label class="input-group-addon"> Search </label> <input type="text" class="form-control cari" placeholder="' + this.message.search + ' " > </div></div>';
-		  var menu = this.make_menu();
+		  var search = '<div class="col-md-6 pull-right"><div class="input-group"> <label class="input-group-addon"> '+this.message.searchText +' </label> <input type="text" class="form-control cari" placeholder="' + this.message.search + ' " > </div></div>';
+		  var menu = this.makeMenu();
 		  menu.prepend(search);
 		  
 		  table.find('.cari').keyup(function () {
@@ -306,5 +307,3 @@
 	   return this;
 	};
 } (jQuery) );
-
-
