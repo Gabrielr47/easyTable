@@ -37,13 +37,16 @@
 			,buttonDesc:{
 				icon:{check:'fa fa-check',uncheck:'fa fa-close'}
 				,placement:'right'
+			},
+			page:{
+				total:0,limit:0,callback:false
 			}
 		};
 		this.message = {
 			all: 'Marcar todos registros.',
 			clear: 'Desmarcar todos registos.',
 			search: 'Pesquisar em',
-			searchText:'Search'
+			searchText:'Search',prev:'Previous',next:'Next'
 		};
 		this.select = function () {
 			var table = this;
@@ -277,6 +280,55 @@
 		  });
 		  return selected;
 	   };
+	   /***************************** PAGING ************************/
+	   this.paging =function(){
+		  var table = this;
+		  var limit  = parseInt( this.options.page.total ) / parseInt( this.options.page.limit ) ;
+		  var callback = this.options.page.callback;
+		  
+		  table.append('<ul class="pagination pull-right"><li class="disabled"><a href="#" data-info="prev"> '+this.message.prev+' </a></li><li class="active"><a href="#" data-info="cnt">1</a></li><li class="'+(limit <= 1?'disabled':'')+'"><a href="#" data-info="next">'+this.message.next+' </a></li></ul>');
+		  table.find('ul.pagination').find('li a').each(function(){
+			$(this).click(function(){
+				if( typeof $(this).attr('data-info') ==='undefined' )return;
+				var a = $(this).parents('ul');
+				switch( $(this).attr('data-info') ){
+					case 'prev':
+						if( $(this).parent().hasClass('disabled') )break;
+						
+						var a_no = a.find('[data-info="cnt"]').text();
+						a_no = a_no < 1 ? 1 : a_no;
+						--a_no ;
+						
+						if(a_no > 1){
+							a.find('[data-info="cnt"]').text( a_no );
+						}else{
+							a.find('[data-info="prev"]').parent().addClass('disabled');
+							a.find('[data-info="cnt"]').text( 1 );
+						}
+						a.find('[data-info="next"]').parent().removeClass('disabled');
+						if(typeof callback ==='function')callback(table , a_no);
+						break;
+					case 'next':
+						if( $(this).parent().hasClass('disabled') )break;
+						
+						var a_no = a.find('[data-info="cnt"]').text();
+						a_no = a_no < 1 ? 1 : a_no;
+						++a_no;
+						if(a_no > 0){
+							a.find('[data-info="prev"]').parent().removeClass('disabled');
+							a.find('[data-info="cnt"]').text( a_no );
+							if(a_no >= limit){
+								$(this).parent().addClass('disabled');
+							}
+						}
+						if(typeof callback ==='function')callback(table , a_no);
+						break;
+					default: break;
+				}
+			});
+		  });
+	   };
+	   /***************************** END OF PAGING ************************/
 	   this.create = function () {
 	   
 		  this.options = $.extend({}, this.options, options);
@@ -285,7 +337,9 @@
 		  if (this.options.message) {
 			  this.message = $.extend({}, this.message, this.options.message );
 		  }
-		  
+		  if( this.options.page.limit > 0 && this.options.page.total > 0){
+			this.paging(); 
+		  }
 		  if (this.options.select) {
 			 this.select();
 		  }
