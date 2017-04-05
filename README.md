@@ -34,7 +34,7 @@
 $("#table").easyTable();
 ```
 <p>To disable some configuration or customize you can set the params like this:</p>
-```javascript
+<pre><code>
 $("#table").easyTable({
     hover:'btn-primary',
     buttons:false,
@@ -42,17 +42,16 @@ $("#table").easyTable({
     sortable:true,
     scroll: {active: true, height: '400px'}
 });
-```
+</code></pre>
 <p> To get the values of columns selected just call the method getSelected() like this:</p>
-```javascript
+<pre><code>
 var table = $("#table").easyTable();
 $("#getSelected").click(function() {
   table.getSelected(0); // Where the 0 is the index of column, in this example the id column.
 });
-```
+</code></pre>
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
-<p><strong><a href="http://gabrielr47.github.io/plugin/">easyTable Site</a></strong> </p>
 <p><strong><a href="https://jsfiddle.net/gabrielr47/cbsh4wf6/34/">easyTable Jsfiddle</a></strong> </p>
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="mini-icon mini-icon-link"></span></a>Authors</h2>
