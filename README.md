@@ -2,6 +2,7 @@
 
 <h2>
 <a name="Features" class="anchor" href="#features"><span class="mini-icon mini-icon-link"></span></a>Features</h2>
+
 * Sort asc - desc
 * Filter by Numbers and Text
 * Select all/clear
