@@ -1,6 +1,3 @@
-![easyTable is a simple plugin for jQuery.](http://s28.postimg.org/cey2iq4a5/easy_Table_fw.png)
-
-<h2>
 <a name="Features" class="anchor" href="#features"><span class="mini-icon mini-icon-link"></span></a>Features</h2>
 
 * Sort asc - desc
